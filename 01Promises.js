@@ -1,15 +1,36 @@
 // ============================ BASIC SYNTAX ===========================================
+/* 
+Promise: in js promise is an object that represent a value that will be available in future.
+          promise status: pending, fullfilled ,rejected.
 
-let myPromise = new Promise(function(resolve, reject) {
-  // Do some async work
-  let success = false;
 
-  if (success) {
-    resolve("Task completed successfully!");
-  } else {
-    reject("Something went wrong!");
+        
+setTimeout: it runs a function after a given time delay.
+
+Syntax:
+
+setTimeout(function, timeInMilliseconds);
+
+Example:  setTimeout(() => {
+  console.log("Hello after 2 seconds");
+}, 2000);
+
+we use setTimeout in js because request goes to server it check database and js not block browser 
+while waiting.
+
+
+
+*/
+let myPromise = new Promise((resolve,reject) =>{
+  let success = true;
+  if(success){
+    resolve("Task completes")}
+
+  else{
+    reject("Task not completes")
   }
-});
+  }
+)
 
 myPromise
   .then(function(result) {
