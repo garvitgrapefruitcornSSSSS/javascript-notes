@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event learning</title>
+</head>
+<body>
+    <h2>Amazing images</h2>
+    <div style="background-color: black;">
+        <ul id = "images">
+            <li><img width="200px" id = "photoshop" src="first.png"></li>
+            <li><img width="200px" id = "second" src="first.png"></li>
+            <li><img width="200px" id = "third" src="first.png"></li>
+            <li><img width="200px" id = "fourth" src="first.png"></li>
+            <li><a style="color: white; "href="https:google.com" id = "google">google</a></li>
+            
+
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('second').onclick= function(){
+    //     alert("owl clicked")
+    // }
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log(e)
+    //     alert("second cclicked")})
+
+    // document.getElementById('second').addEventListener('click',function(e){
+    //     console.log(e)
+    //     alert("second cclicked")
+    // })
+
+    // What is e:
+    /*
+    e is the event object. it is automatically passed by the browser when an event happens.it 
+    track all the info about events.
+
+    We can name it anything
+    function(event) { }
+    function(e) { }
+    function(evt) { }
+
+    how the e works:
+    (1)when we click on webpage browser detect the event create an object inside the function and 
+    track all info.
+
+    What does e contain:
+    console.log(e.target)
+    console.log(e.type)
+    e.stopPropogation(); Stops event bubbling (parent elements won’t receive the event)
+
+    What is bubbling:
+
+    document.getElementById('second').addEventListener('click',function(e){
+        console.log(e)
+        alert("second cclicked")
+
+    document.getElementById('second').addEventListener('click',function(e){
+        console.log(e)
+        alert("second cclicked")
+
+    in this code when i target child id then first child id pop up than parent so if i not 
+    want that bubbling than use e.stopPropogation() in child id.
+    */ 
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     console.log("google clicked")
+    //     e.preventDefault();
+    //     console.log(e.target.parentNode)
+    //     console.log(e.target.tagName)
+    // })
+    
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        if(e.target.tagName === 'IMG'){
+            let removeit = e.target.parentNode
+            removeit.remove();
+        }
+    })
+</script>
+</html>
