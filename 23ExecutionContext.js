@@ -9,3 +9,17 @@
 //  Function exection context.
 // Eval execution context.
 
+// Array.every()
+/* 
+array.every((element, index, array) => {
+  return condition;
+});
+
+ */
+
+const marks = [20,60,80]
+const passes = marks.every(nums=>nums>18)
+console.log(passes) /* True */
+
+const passwithgrace = marks.some(nums =>nums>=50)
+console.log(passes)

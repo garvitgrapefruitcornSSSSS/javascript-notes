@@ -14,3 +14,9 @@ console.table([accountid,accountEmail,accountPassword,accountcity])
 // {} this curly braces is also known as scope.
 /*prefer not to use var due to scope lock*/
 console.table([accountEmail,accountPassword,accountid])
+if(true){
+    var a = 5
+    let b = 6
+}
+
+console.log(a)

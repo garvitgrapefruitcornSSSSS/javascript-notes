@@ -13,16 +13,36 @@ const mybutton = document.querySelector("#btn")
 
 
 
-const getfacts = async ()=>{
+/* const getfacts = async ()=>{
     let response = await fetch(url)
     console.log(response)
  
     let data = await response.json()
     console.log(data.message)
     imageurl.innerText = data.message
-}
+} */
+
+/* function getfacts(){
+  fetch(url).then((response)=>{
+    return response.json()
+  })
+  .then((data)=>{
+    console.log(data)
+    imageurl.innerText = data.message
+
+  })
+} */
+
+
+
+
+
 
 mybutton.addEventListener("click",getfacts)
+
+// HTTP request method
+// Response status code
+// HTTP response header also contain 
   /* DAta came as a json format because data looks like a js object
 
 AJAJ: Asynchronus js and json

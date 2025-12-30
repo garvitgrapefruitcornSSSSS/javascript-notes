@@ -6,13 +6,18 @@ const course = {
 
 // Destructure of object
 
-// course.courseinstructor
+let {coursename,price} = course;
+console.log(coursename)
 
-const{courseinstructor:instructor } = course 
-// Reaname variable.
-const{coursename,price} = course
-console.log(instructor);
-console.log(coursename,price);
+// Renaming while destructuring
+let {coursename:name,price:budget} = course;
+console.log(name)
+
+// Default values
+
+let {country = "India"} = course;
+console.log(country)
+
 
 /*An API (Application Programming Interface) is a way for different software applications to communicate 
 with each other. It defines a set of rules and protocols  that allow one program to request and exchange 

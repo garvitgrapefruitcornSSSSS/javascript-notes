@@ -43,4 +43,20 @@ loginUserMessage("Amit")
 // When we declare function like function saymyname() than the detail we pass in the bracket 
 // it called parameter. and when i call than it called argument.
 
+// function declaration: jaise ham normally function declare krte hain;
+
+greet (); /* Hoisting is allowed */
+
+function greet(){
+    console.log("hello.....")
+}
+
+let gstcalculator = function(amount){
+    console.log(amount*0.18)
+
+}
+
+gstcalculator(456); /* hoisting is not allowed */
+
+
 
